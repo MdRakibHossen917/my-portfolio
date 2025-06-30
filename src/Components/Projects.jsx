@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import dashboardImg from "../assets/Dashboard.JPG";
 import portfolio from "../assets/portfolio.JPG";
+import gojoy from "../assets/Gojoy.JPG";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import {
   SiMongodb,
@@ -33,7 +34,7 @@ const Projects = () => {
     {
       id: "project2",
       name: "Portfolio Website",
-      image: portfolio ,
+      image: portfolio,
       techStack: ["React", "Tailwind CSS"],
       icons: [
         <FaReact key="react" className="text-blue-500" />,
@@ -41,22 +42,21 @@ const Projects = () => {
       ],
       description: "Modern responsive portfolio with animations and dark mode.",
       liveLink: "https://example.com/project2",
-      githubClient: "https://github.com/username/project2",
+      githubClient: "https://github.com/MdRakibHossen917/my-portfolio",
       category: "frontend",
     },
     {
       id: "project3",
-      name: "API Service",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+      name: "gojoy Booking Website",
+      image: gojoy,
       techStack: ["Node.js", "Express", "MongoDB"],
       icons: [
         <FaNodeJs key="node" className="text-green-500" />,
         <SiExpress key="express" className="text-gray-400" />,
       ],
       description: "RESTful API service with JWT authentication.",
-      liveLink: "https://example.com/project3",
-      githubClient: "https://github.com/username/project3",
+      liveLink: "https://gojoy-auth.web.app/",
+      githubClient: "https://github.com/MdRakibHossen917/Gojoy_Traveller",
       category: "backend",
     },
   ];
