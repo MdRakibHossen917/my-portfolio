@@ -20,12 +20,13 @@ const Projects = () => {
       id: "project1",
       name: "Analytics Dashboard",
       image: dashboardImg,
-      techStack: ["React", "JavaScript", "MongoDB"],
+      des: "A dynamic data visualization dashboard featuring interactive charts and graphs for real-time insights, analysis, and user-friendly decision-making experience.",
       icons: [
         <FaReact key="react" className="text-blue-500" />,
         <SiJavascript key="js" className="text-yellow-500" />,
         <SiMongodb key="mongo" className="text-green-600" />,
       ],
+      techStack: ["React", "JavaScript", "MongoDB"],
       description: "Data visualization dashboard with interactive charts.",
       liveLink: "https://example.com/project1",
       githubClient: "https://github.com/username/project1-client",
@@ -35,11 +36,12 @@ const Projects = () => {
       id: "project2",
       name: "Portfolio Website",
       image: portfolio,
-      techStack: ["React", "Tailwind CSS"],
+      des: "A modern, responsive portfolio website showcasing skills, projects, and experience to highlight expertise and attract potential clients or employers.",
       icons: [
         <FaReact key="react" className="text-blue-500" />,
         <SiTailwindcss key="tailwind" className="text-cyan-400" />,
       ],
+      techStack: ["React", "Tailwind CSS"],
       description: "Modern responsive portfolio with animations and dark mode.",
       liveLink: "https://sage-cupcake-6f1c79.netlify.app/",
       githubClient: "https://github.com/MdRakibHossen917/my-portfolio",
@@ -47,13 +49,14 @@ const Projects = () => {
     },
     {
       id: "project3",
-      name: "gojoy Booking Website",
+      name: "GoJoy Booking Website",
       image: gojoy,
-      techStack: ["Node.js", "Express", "MongoDB"],
+      des: "GoJoy is a seamless tour package booking website offering secure, fast, and user-friendly travel planning for unforgettable journeys worldwide.",
       icons: [
         <FaNodeJs key="node" className="text-green-500" />,
         <SiExpress key="express" className="text-gray-400" />,
       ],
+      techStack: ["Node.js", "Express.js"],
       description: "RESTful API service with JWT authentication.",
       liveLink: "https://gojoy-auth.web.app/",
       githubClient: "https://github.com/MdRakibHossen917/Gojoy_Traveller",
@@ -117,7 +120,7 @@ const Projects = () => {
         </div>
       </motion.div>
 
-      {/* Project Cards - 3 per line */}
+      {/* Project Cards */}
       <div className="flex flex-wrap gap-8 justify-center">
         {filteredProjects.map((project, index) => (
           <motion.div
@@ -134,9 +137,6 @@ const Projects = () => {
                 alt={project.name}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <p className="text-white text-sm">{project.description}</p>
-              </div>
             </div>
 
             <div className="p-5 space-y-4">
@@ -153,16 +153,10 @@ const Projects = () => {
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-2">
-                {project.techStack.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="px-2 py-1 text-xs rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
+              {/* Show full description here instead of tech stack */}
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                {project.des}
+              </p>
 
               <div className="flex space-x-3">
                 <a
