@@ -41,7 +41,7 @@ const Projects = () => {
         <SiTailwindcss key="tailwind" className="text-cyan-400" />,
       ],
       description: "Modern responsive portfolio with animations and dark mode.",
-      liveLink: "https://example.com/project2",
+      liveLink: "https://sage-cupcake-6f1c79.netlify.app/",
       githubClient: "https://github.com/MdRakibHossen917/my-portfolio",
       category: "frontend",
     },
