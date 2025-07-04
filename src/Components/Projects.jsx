@@ -72,7 +72,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+      className=" mt-25 mb-15 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
     >
       <div className="text-center mb-16">
         <motion.h2

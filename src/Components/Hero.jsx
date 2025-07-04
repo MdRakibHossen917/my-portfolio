@@ -139,7 +139,7 @@ const Hero = () => {
             </motion.h1>
 
             <motion.h2
-              className="dark:bg-blue-900 dark:text-blue-300 py-2 rounded-lg text-lg sm:text-xl font-medium mb-4"
+              className=" dark:text-blue-300 py-2 rounded-lg text-lg sm:text-xl font-medium mb-4"
               variants={itemVariants}
             >
               MERN Stack Developer | JavaScript Enthusiast
@@ -159,7 +159,7 @@ const Hero = () => {
               <span className="font-medium text-yellow-600 dark:text-yellow-400">
                 MongoDB
               </span>
-              .
+              
             </motion.p>
 
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">

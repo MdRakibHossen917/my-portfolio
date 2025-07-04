@@ -9,10 +9,12 @@ const RootLayout = () => {
     <div>
       <Navbar></Navbar>
 
-      <div>
+      <div className="min-h-[calc(100vh-72px)]">
         <Outlet></Outlet>
       </div>
-      <Footer></Footer>
+     <div className="flex-grow">
+         <Footer></Footer>
+      </div>
     </div>
   );
 };

@@ -25,6 +25,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
+          {/* Logo */}
           <Link to="/" className="flex items-center" onClick={closeMenu}>
             <img
               className="w-12 h-12 md:w-14 md:h-14 transition-all duration-300 hover:scale-105"
@@ -36,45 +37,47 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             <NavLink
-              to="/"
+              to="/banner"
               className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white transition-colors"
               end
             >
               Home
             </NavLink>
-            <a
-              href="#about"
+            {/* Use NavLink with "to" for internal routing */}
+            <NavLink
+              to="/about"
               className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white transition-colors"
             >
               About
-            </a>
-            <a
-              href="#skills"
+            </NavLink>
+            <NavLink
+              to="/skills"
               className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white transition-colors"
             >
               Skills
-            </a>
-            <a
-              href="#projects"
+            </NavLink>
+            <NavLink
+              to="/projects"
               className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white transition-colors"
             >
               Projects
-            </a>
-            <a
-              href="#contact"
+            </NavLink>
+            <NavLink
+              to="/contact"
               className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white transition-colors"
             >
               Contact
-            </a>
+            </NavLink>
 
-            <a
-              href="/CV"
+            {/* For CV / Resume route */}
+            <NavLink
+              to="/CV"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2   bg-blue-600 text-white rounded-md"
+              className="px-4 py-2 bg-blue-600 text-white rounded-md"
             >
               View Resume
-            </a>
+            </NavLink>
           </div>
 
           {/* Mobile Menu Button */}
@@ -103,7 +106,7 @@ const Navbar = () => {
       >
         <div className="px-2 pt-2 pb-4 space-y-1 sm:px-3 bg-gray-800/95 backdrop-blur-sm">
           <NavLink
-            to="/"
+            to="/banner"
             className={({ isActive }) =>
               `block px-3 py-2 rounded-md text-base font-medium ${
                 isActive
@@ -116,34 +119,65 @@ const Navbar = () => {
           >
             Home
           </NavLink>
-          <a
-            href="#about"
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+
+          {/* Internal routing for these pages */}
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              `block px-3 py-2 rounded-md text-base font-medium ${
+                isActive
+                  ? "bg-gray-900 text-blue-400"
+                  : "text-gray-300 hover:bg-gray-700 hover:text-white"
+              }`
+            }
             onClick={closeMenu}
           >
             About
-          </a>
-          <a
-            href="#skills"
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+          </NavLink>
+
+          <NavLink
+            to="/skills"
+            className={({ isActive }) =>
+              `block px-3 py-2 rounded-md text-base font-medium ${
+                isActive
+                  ? "bg-gray-900 text-blue-400"
+                  : "text-gray-300 hover:bg-gray-700 hover:text-white"
+              }`
+            }
             onClick={closeMenu}
           >
             Skills
-          </a>
-          <a
-            href="#projects"
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+          </NavLink>
+
+          <NavLink
+            to="/projects"
+            className={({ isActive }) =>
+              `block px-3 py-2 rounded-md text-base font-medium ${
+                isActive
+                  ? "bg-gray-900 text-blue-400"
+                  : "text-gray-300 hover:bg-gray-700 hover:text-white"
+              }`
+            }
             onClick={closeMenu}
           >
             Projects
-          </a>
-          <a
-            href="#contact"
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+          </NavLink>
+
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              `block px-3 py-2 rounded-md text-base font-medium ${
+                isActive
+                  ? "bg-gray-900 text-blue-400"
+                  : "text-gray-300 hover:bg-gray-700 hover:text-white"
+              }`
+            }
             onClick={closeMenu}
           >
             Contact
-          </a>
+          </NavLink>
+
+          {/* Resume Download Link - use <a> tag since it’s a file */}
           <a
             href="/MdRakibHossen_Resume.pdf"
             download="MdRakibHossen_Resume.pdf"
