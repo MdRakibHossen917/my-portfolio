@@ -41,7 +41,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="scroll-mt-20 py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto"
+      className="scroll-mt-20   py-27 px-4 mt-10 sm:px-6 lg:px-8 max-w-6xl mx-auto"
     >
       <div className="text-center mb-12">
         <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-800 dark:text-white">

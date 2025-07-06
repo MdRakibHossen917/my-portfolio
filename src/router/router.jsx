@@ -6,6 +6,8 @@ import Skills from "../Components/Skills";
 import Projects from "../Components/Projects";
  
 import ProfessionalResume from "../Components/ProfessionalResume";
+import Hero from "../Components/Hero";
+import Contact from "../Components/Contact";
 
  
 
@@ -30,12 +32,19 @@ export const router = createBrowserRouter([
         path: "/projects",
         element: <Projects />,
       },
+      {
+        path: "/banner",
+        element: <Hero />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
 
       {
         path: "/CV",
         element: <ProfessionalResume />,
       },
     ],
-    
   },
 ]);

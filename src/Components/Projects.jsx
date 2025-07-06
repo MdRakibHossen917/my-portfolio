@@ -1,8 +1,17 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
-import dashboardImg from "../assets/Dashboard.JPG";
-import portfolio from "../assets/portfolio.JPG";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+import dashboardImg1 from "../assets/Dashboard.JPG";
+import dashboardImg2 from "../assets/Dashboard1.JPG";
+import dashboardImg3 from "../assets/Dashboard2.JPG";
+import portfolioImg1 from "../assets/portfolio.JPG";
+import portfolioImg2 from "../assets/portfolio1.JPG";
+import gojoyImg1 from "../assets/Gojoy.JPG";
+import gojoyImg2 from "../assets/Gojoy2.JPG";
+
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import {
   SiMongodb,
@@ -18,14 +27,13 @@ const Projects = () => {
     {
       id: "project1",
       name: "Analytics Dashboard",
-      image: dashboardImg,
-      techStack: ["React", "JavaScript", "MongoDB"],
+      images: [dashboardImg1, dashboardImg2,dashboardImg3],
+      des: "A dynamic data visualization dashboard featuring interactive charts and graphs for real-time insights, analysis, and user-friendly decision-making experience.",
       icons: [
         <FaReact key="react" className="text-blue-500" />,
         <SiJavascript key="js" className="text-yellow-500" />,
         <SiMongodb key="mongo" className="text-green-600" />,
       ],
-      description: "Data visualization dashboard with interactive charts.",
       liveLink: "https://example.com/project1",
       githubClient: "https://github.com/username/project1-client",
       category: "fullstack",
@@ -33,30 +41,27 @@ const Projects = () => {
     {
       id: "project2",
       name: "Portfolio Website",
-      image: portfolio ,
-      techStack: ["React", "Tailwind CSS"],
+      images: [portfolioImg1, portfolioImg2],
+      des: "A modern, responsive portfolio website showcasing skills, projects, and experience to highlight expertise and attract potential clients or employers.",
       icons: [
         <FaReact key="react" className="text-blue-500" />,
         <SiTailwindcss key="tailwind" className="text-cyan-400" />,
       ],
-      description: "Modern responsive portfolio with animations and dark mode.",
-      liveLink: "https://example.com/project2",
-      githubClient: "https://github.com/username/project2",
+      liveLink: "https://sage-cupcake-6f1c79.netlify.app/",
+      githubClient: "https://github.com/MdRakibHossen917/my-portfolio",
       category: "frontend",
     },
     {
       id: "project3",
-      name: "API Service",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-      techStack: ["Node.js", "Express", "MongoDB"],
+      name: "GoJoy Booking Website",
+      images: [gojoyImg1, gojoyImg2],
+      des: "GoJoy is a seamless tour package booking website offering secure, fast, and user-friendly travel planning for unforgettable journeys worldwide.",
       icons: [
         <FaNodeJs key="node" className="text-green-500" />,
         <SiExpress key="express" className="text-gray-400" />,
       ],
-      description: "RESTful API service with JWT authentication.",
-      liveLink: "https://example.com/project3",
-      githubClient: "https://github.com/username/project3",
+      liveLink: "https://gojoy-auth.web.app/",
+      githubClient: "https://github.com/MdRakibHossen917/Gojoy_Traveller",
       category: "backend",
     },
   ];
@@ -69,7 +74,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+      className="mt-24 mb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
     >
       <div className="text-center mb-16">
         <motion.h2
@@ -117,7 +122,7 @@ const Projects = () => {
         </div>
       </motion.div>
 
-      {/* Project Cards - 3 per line */}
+      {/* Project Cards */}
       <div className="flex flex-wrap gap-8 justify-center">
         {filteredProjects.map((project, index) => (
           <motion.div
@@ -129,14 +134,24 @@ const Projects = () => {
             className="w-full sm:w-[48%] lg:w-[32%] xl:w-[30%] 2xl:w-[28%] bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 dark:border-gray-700 group"
           >
             <div className="relative h-48 overflow-hidden">
-              <img
-                src={project.image}
-                alt={project.name}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <p className="text-white text-sm">{project.description}</p>
-              </div>
+              <Carousel
+                showThumbs={false}
+                showStatus={false}
+                infiniteLoop
+                autoPlay
+                interval={3000}
+                className="h-full"
+              >
+                {project.images.map((img, i) => (
+                  <div key={i} className="h-48">
+                    <img
+                      src={img}
+                      alt={`${project.name} Screenshot ${i + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+              </Carousel>
             </div>
 
             <div className="p-5 space-y-4">
@@ -153,16 +168,9 @@ const Projects = () => {
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-2">
-                {project.techStack.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="px-2 py-1 text-xs rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                {project.des}
+              </p>
 
               <div className="flex space-x-3">
                 <a
