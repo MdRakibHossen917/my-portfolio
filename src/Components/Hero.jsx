@@ -159,14 +159,13 @@ const Hero = () => {
               <span className="font-medium text-yellow-600 dark:text-yellow-400">
                 MongoDB
               </span>
-              
             </motion.p>
 
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               {/* Resume download link */}
               <motion.a
-                href="/Rakib_Hossen_Resume.pdf"
-                download="Rakib_Hossen_Resume.pdf"
+                href="/Resume.pdf"
+                download="Md_Rakib_Hossen_Resume.pdf" 
                 className="flex items-center gap-2 px-12 py-3 text-white bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 rounded-lg transition-all"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

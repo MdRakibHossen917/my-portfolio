@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, NavLink } from "react-router"; 
+import { Link, NavLink } from "react-router";
 import myLogo from "../../assets/myLogo.png";
 import { FiDownload, FiX, FiMenu } from "react-icons/fi";
 
@@ -43,7 +43,6 @@ const Navbar = () => {
             >
               Home
             </NavLink>
-            {/* Use NavLink with "to" for internal routing */}
             <NavLink
               to="/about"
               className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white transition-colors"
@@ -69,15 +68,15 @@ const Navbar = () => {
               Contact
             </NavLink>
 
-            {/* For CV / Resume route */}
-            <NavLink
-              to="/CV"
+            {/* Resume View in New Tab */}
+            <a
+              href="/Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-blue-600 text-white rounded-md"
+              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
             >
-              View Resume
-            </NavLink>
+              Resume
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -119,8 +118,6 @@ const Navbar = () => {
           >
             Home
           </NavLink>
-
-          {/* Internal routing for these pages */}
           <NavLink
             to="/about"
             className={({ isActive }) =>
@@ -134,7 +131,6 @@ const Navbar = () => {
           >
             About
           </NavLink>
-
           <NavLink
             to="/skills"
             className={({ isActive }) =>
@@ -148,7 +144,6 @@ const Navbar = () => {
           >
             Skills
           </NavLink>
-
           <NavLink
             to="/projects"
             className={({ isActive }) =>
@@ -162,7 +157,6 @@ const Navbar = () => {
           >
             Projects
           </NavLink>
-
           <NavLink
             to="/contact"
             className={({ isActive }) =>
@@ -177,10 +171,11 @@ const Navbar = () => {
             Contact
           </NavLink>
 
-          {/* Resume Download Link - use <a> tag since it’s a file */}
+          {/* Resume link for mobile – view in new tab */}
           <a
-            href="/MdRakibHossen_Resume.pdf"
-            download="MdRakibHossen_Resume.pdf"
+            href="/Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="block px-3 py-2 mt-2 rounded-md text-base font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors"
             onClick={closeMenu}
           >
