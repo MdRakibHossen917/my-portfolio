@@ -27,7 +27,7 @@ const Projects = () => {
     {
       id: "project1",
       name: "Analytics Dashboard",
-      images: [dashboardImg1, dashboardImg2,dashboardImg3],
+      images: [dashboardImg1, dashboardImg2, dashboardImg3],
       des: "A dynamic data visualization dashboard featuring interactive charts and graphs for real-time insights, analysis, and user-friendly decision-making experience.",
       icons: [
         <FaReact key="react" className="text-blue-500" />,
@@ -47,7 +47,7 @@ const Projects = () => {
         <FaReact key="react" className="text-blue-500" />,
         <SiTailwindcss key="tailwind" className="text-cyan-400" />,
       ],
-      liveLink: "https://sage-cupcake-6f1c79.netlify.app/",
+      liveLink: "https://my-portfolio-dd98e.web.app/",
       githubClient: "https://github.com/MdRakibHossen917/my-portfolio",
       category: "frontend",
     },
