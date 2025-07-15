@@ -93,7 +93,7 @@ const ProfessionalResume = () => {
                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
               />
             </svg>
-            rakibhossen.dev@gmail.com
+            mdrakibhossencse@gmail.com
           </span>
 
           <span style={{ display: "flex", alignItems: "center" }}>
@@ -441,13 +441,9 @@ const ProfessionalResume = () => {
                 </li>
                 <li>Tech: React, Node.js, MongoDB, Socket.io</li>
               </ul>
-              <div style={{ display: "flex", gap: "10px", marginTop: "5px" }}>
-                
-                   
-                     
-                
-                 
-              </div>
+              <div
+                style={{ display: "flex", gap: "10px", marginTop: "5px" }}
+              ></div>
             </div>
 
             <div style={{ marginBottom: "20px" }}>

@@ -14,8 +14,8 @@ const Contact = () => {
     {
       icon: <FiMail className="text-blue-500" size={24} />,
       title: "Email",
-      value: "rakibhossen.dev@gmail.com",
-      link: "mailto:rakibhossen.dev@gmail.com",
+      value: "mdrakibhossencse@gmail.com",
+      link: "mailto:mdrakibhossencse@gmail.com",
     },
     {
       icon: <FiPhone className="text-green-500" size={24} />,
