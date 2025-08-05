@@ -4,6 +4,7 @@ import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
+
 import dashboardImg1 from "../assets/Dashboard.JPG";
 import dashboardImg2 from "../assets/Dashboard1.JPG";
 import dashboardImg3 from "../assets/Dashboard2.JPG";
@@ -11,6 +12,11 @@ import portfolioImg1 from "../assets/portfolio.JPG";
 import portfolioImg2 from "../assets/portfolio1.JPG";
 import gojoyImg1 from "../assets/Gojoy.JPG";
 import gojoyImg2 from "../assets/Gojoy2.JPG";
+
+import express1 from "../assets/delivery-1.JPG";
+import express2 from "../assets/delivery-2.JPG";
+import express3 from "../assets/delivery-3.JPG";
+import express4 from "../assets/delivery-4.JPG";
 
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import {
@@ -40,6 +46,35 @@ const Projects = () => {
     },
     {
       id: "project2",
+      name: "Delivery Express Application",
+      images: [express1, express2, express3, express4],
+      des: "A user-friendly interface where customers can register, log in, send parcels, and track them using a tracking ID. Admins assign riders, riders update delivery status, and their earnings are managed via a wallet system. The UI is intuitive and responsive for smooth courier management.",
+      icons: [
+        <FaReact key="react" className="text-blue-500" />,
+        <SiJavascript key="js" className="text-yellow-500" />,
+        <SiTailwindcss key="tailwind" className="text-cyan-400" />,
+      ],
+      liveLink: "https://express-delivery-9e788.web.app/",
+      githubClient:
+        "https://github.com/MdRakibHossen917/courier-and-parcel-management-system-client",
+      category: "fullstack",
+    },
+    {
+      id: "project3",
+      name: "GoJoy Booking Website",
+      images: [gojoyImg1, gojoyImg2],
+      des: "GoJoy is a seamless tour package booking website offering secure, fast, and user-friendly travel planning for unforgettable journeys worldwide.",
+      icons: [
+        <FaNodeJs key="node" className="text-green-500" />,
+        <SiJavascript key="js" className="text-yellow-500" />,
+        <SiExpress key="express" className="text-gray-400" />,
+      ],
+      liveLink: "https://gojoy-auth.web.app/",
+      githubClient: "https://github.com/MdRakibHossen917/Gojoy_Traveller",
+      category: "backend",
+    },
+    {
+      id: "project4",
       name: "Portfolio Website",
       images: [portfolioImg1, portfolioImg2],
       des: "A modern, responsive portfolio website showcasing skills, projects, and experience to highlight expertise and attract potential clients or employers.",
@@ -50,19 +85,6 @@ const Projects = () => {
       liveLink: "https://my-portfolio-dd98e.web.app/",
       githubClient: "https://github.com/MdRakibHossen917/my-portfolio",
       category: "frontend",
-    },
-    {
-      id: "project3",
-      name: "GoJoy Booking Website",
-      images: [gojoyImg1, gojoyImg2],
-      des: "GoJoy is a seamless tour package booking website offering secure, fast, and user-friendly travel planning for unforgettable journeys worldwide.",
-      icons: [
-        <FaNodeJs key="node" className="text-green-500" />,
-        <SiExpress key="express" className="text-gray-400" />,
-      ],
-      liveLink: "https://gojoy-auth.web.app/",
-      githubClient: "https://github.com/MdRakibHossen917/Gojoy_Traveller",
-      category: "backend",
     },
   ];
 
