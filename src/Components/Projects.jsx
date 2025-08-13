@@ -18,12 +18,19 @@ import express2 from "../assets/delivery-2.JPG";
 import express3 from "../assets/delivery-3.JPG";
 import express4 from "../assets/delivery-4.JPG";
 
+import agro1 from "../assets/agro/agro1.png";
+import agro2 from "../assets/agro/agro2.png";
+import agro3 from "../assets/agro/agro3.png";
+import agro4 from "../assets/agro/agro4.png"
+import agro5 from "../assets/agro/agro5.png";
+
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import {
   SiMongodb,
   SiExpress,
   SiTailwindcss,
   SiJavascript,
+  SiNextdotjs,
 } from "react-icons/si";
 
 const Projects = () => {
@@ -84,6 +91,20 @@ const Projects = () => {
       ],
       liveLink: "https://my-portfolio-dd98e.web.app/",
       githubClient: "https://github.com/MdRakibHossen917/my-portfolio",
+      category: "frontend",
+    },
+    {
+      id: "project5",
+      name: "Agro-vet Website",
+      images: [agro1, agro2, agro3, agro4, agro5],
+      des: "Agro-Vet is a responsive veterinary and agricultural product platform designed for farmers and livestock caretakers. Built with Next.js and Tailwind CSS, it offers product listings, veterinary services, and educational resources.",
+      icons: [
+        <FaReact key="react" className="text-blue-500" />,
+        <SiTailwindcss key="tailwind" className="text-cyan-400" />,
+        <SiNextdotjs key="nextjs" className="text-cyan-400" />,
+      ],
+      liveLink: "https://agro-vet.vercel.app/",
+      githubClient: "https://github.com/MdRakibHossen917/agro-vet",
       category: "frontend",
     },
   ];
