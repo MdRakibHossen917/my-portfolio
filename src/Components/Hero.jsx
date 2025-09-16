@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import {
   FiGithub,
   FiLinkedin,
-  FiTwitter,
   FiMail,
   FiArrowUp,
   FiDownload,
+  FiFacebook,
 } from "react-icons/fi";
 
 const Hero = () => {
@@ -22,14 +22,14 @@ const Hero = () => {
     },
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/in/md-rakib-hossen-5b1aa3274/",
+      url: "https://www.linkedin.com/in/rakibhossen917/",
       icon: <FiLinkedin className="w-6 h-6" />,
       color: "hover:text-blue-600 dark:hover:text-blue-400",
     },
     {
-      name: "Twitter",
-      url: "https://x.com/MdRakib49720662",
-      icon: <FiTwitter className="w-6 h-6" />,
+      name: "facebook",
+      url: "https://www.facebook.com/md.rakib.hossen.41751",
+      icon: <FiFacebook className="w-6 h-6" />,
       color: "hover:text-sky-500 dark:hover:text-sky-400",
     },
   ];
@@ -145,21 +145,14 @@ const Hero = () => {
               MERN Stack Developer | JavaScript Enthusiast
             </motion.h2>
 
-            <motion.p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-              I build exceptional digital experiences with modern web
-              technologies. Specializing in{" "}
-              <span className="font-medium text-blue-600 dark:text-blue-400">
-                React
-              </span>
-              ,{" "}
-              <span className="font-medium text-green-600 dark:text-green-400">
-                Node.js
-              </span>
-              , and{" "}
-              <span className="font-medium text-yellow-600 dark:text-yellow-400">
-                MongoDB
-              </span>
-            </motion.p>
+           <motion.p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+  I build exceptional digital experiences with modern web technologies. Specializing in{" "}
+  <span className="font-medium text-blue-600 dark:text-blue-400">React</span>,{" "}
+  <span className="font-medium text-blue-600 dark:text-blue-400">Next.js</span>,{" "}
+  <span className="font-medium text-green-600 dark:text-green-400">Node.js</span>, and{" "}
+  <span className="font-medium text-yellow-600 dark:text-yellow-400">MongoDB</span>.
+</motion.p>
+
 
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               {/* Resume download link */}
