@@ -105,7 +105,7 @@ const projectsData = [
   },
   {
     id: "project7",
-    name: "Airbnb Clone",
+    name: "Airbnb Project",
     images: [airbnbImg1, airbnbImg2, airbnbImg3],
     des: "A fully responsive Airbnb clone built with React, TailwindCSS, and Next.js featuring property listings, search functionality, and booking system.",
     icons: [SiNextdotjs,SiTypescript, SiTailwindcss ],
