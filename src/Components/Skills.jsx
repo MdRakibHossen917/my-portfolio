@@ -5,6 +5,7 @@ import {
   SiHtml5,
   SiCss3,
   SiTailwindcss,
+  SiNextdotjs,
   SiNodedotjs,
   SiExpress,
   SiMongodb,
@@ -29,16 +30,11 @@ const Skills = () => {
     { name: "HTML5", icon: <SiHtml5 className="text-orange-500" /> },
     { name: "CSS3", icon: <SiCss3 className="text-blue-400" /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400" /> },
-    { name: "Bootstrap", icon: <SiBootstrap className="text-purple-600" /> },
     { name: "Node.js", icon: <SiNodedotjs className="text-green-500" /> },
     { name: "Express", icon: <SiExpress className="text-gray-400" /> },
     { name: "MongoDB", icon: <SiMongodb className="text-green-600" /> },
-    { name: "MySQL", icon: <SiMysql className="text-blue-600" /> },
     { name: "Git", icon: <SiGit className="text-orange-600" /> },
-    {
-      name: "GitHub",
-      icon: <SiGithub className="text-gray-800 dark:text-white" />,
-    },
+    { name: "GitHub", icon: <SiGithub className="text-gray-800 dark:text-white" /> },
   ];
 
   return (

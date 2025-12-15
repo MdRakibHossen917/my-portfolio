@@ -21,7 +21,7 @@ const About = () => {
         <p className="text-lg leading-relaxed mb-6">
           I am <strong>Md Rakib Hossen</strong>, a passionate and dedicated{" "}
           <strong>MERN Stack Developer</strong> with a solid foundation in
-          JavaScript, React, Node.js, Express, and MongoDB. With a background in{" "}
+          JavaScript, React, Next.js, TypeScript , Node.js, Express, and MongoDB. With a background in{" "}
           <strong>Computer Science & Engineering</strong>, I have successfully
           transformed my academic knowledge into practical, real-world
           development skills.
