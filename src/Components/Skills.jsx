@@ -10,7 +10,8 @@ import {
   SiMongodb,
   SiGit,
   SiGithub,
- 
+  SiNextdotjs,
+  SiTypescript,
   SiPostman,
   SiBootstrap,
   SiMysql,
@@ -19,10 +20,12 @@ import {
 const Skills = () => {
   const skills = [
     { name: "React", icon: <SiReact className="text-blue-500" /> },
+    { name: "Next.js", icon: <SiNextdotjs className="text-gray-900 dark:text-white" /> },
     {
       name: "JavaScript (ES6+)",
       icon: <SiJavascript className="text-yellow-400" />,
     },
+    { name: "TypeScript", icon: <SiTypescript className="text-blue-600" /> },
     { name: "HTML5", icon: <SiHtml5 className="text-orange-500" /> },
     { name: "CSS3", icon: <SiCss3 className="text-blue-400" /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400" /> },
@@ -41,7 +44,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="scroll-mt-20   py-27 px-4 mt-10 sm:px-6 lg:px-8 max-w-6xl mx-auto"
+      className="scroll-mt-20 py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto"
     >
       <div className="text-center mb-12">
         <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-800 dark:text-white">

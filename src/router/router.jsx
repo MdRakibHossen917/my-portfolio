@@ -33,10 +33,6 @@ export const router = createBrowserRouter([
         element: <Projects />,
       },
       {
-        path: "/banner",
-        element: <Hero />,
-      },
-      {
         path: "/contact",
         element: <Contact />,
       },

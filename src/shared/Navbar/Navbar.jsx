@@ -37,33 +37,83 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             <NavLink
-              to="/banner"
-              className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white transition-colors"
+              to="/"
+              className={({ isActive }) =>
+                `px-3 py-2 text-sm font-medium transition-all relative ${
+                  isActive
+                    ? "text-white"
+                    : "text-gray-300 hover:text-white"
+                } ${
+                  isActive
+                    ? "after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-500"
+                    : ""
+                }`
+              }
               end
             >
               Home
             </NavLink>
             <NavLink
               to="/about"
-              className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white transition-colors"
+              className={({ isActive }) =>
+                `px-3 py-2 text-sm font-medium transition-all relative ${
+                  isActive
+                    ? "text-white"
+                    : "text-gray-300 hover:text-white"
+                } ${
+                  isActive
+                    ? "after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-500"
+                    : ""
+                }`
+              }
             >
               About
             </NavLink>
             <NavLink
               to="/skills"
-              className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white transition-colors"
+              className={({ isActive }) =>
+                `px-3 py-2 text-sm font-medium transition-all relative ${
+                  isActive
+                    ? "text-white"
+                    : "text-gray-300 hover:text-white"
+                } ${
+                  isActive
+                    ? "after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-500"
+                    : ""
+                }`
+              }
             >
               Skills
             </NavLink>
             <NavLink
               to="/projects"
-              className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white transition-colors"
+              className={({ isActive }) =>
+                `px-3 py-2 text-sm font-medium transition-all relative ${
+                  isActive
+                    ? "text-white"
+                    : "text-gray-300 hover:text-white"
+                } ${
+                  isActive
+                    ? "after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-500"
+                    : ""
+                }`
+              }
             >
               Projects
             </NavLink>
             <NavLink
               to="/contact"
-              className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white transition-colors"
+              className={({ isActive }) =>
+                `px-3 py-2 text-sm font-medium transition-all relative ${
+                  isActive
+                    ? "text-white"
+                    : "text-gray-300 hover:text-white"
+                } ${
+                  isActive
+                    ? "after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-500"
+                    : ""
+                }`
+              }
             >
               Contact
             </NavLink>
@@ -105,12 +155,16 @@ const Navbar = () => {
       >
         <div className="px-2 pt-2 pb-4 space-y-1 sm:px-3 bg-gray-800/95 backdrop-blur-sm">
           <NavLink
-            to="/banner"
+            to="/"
             className={({ isActive }) =>
-              `block px-3 py-2 rounded-md text-base font-medium ${
+              `block px-3 py-2 text-base font-medium transition-all relative ${
                 isActive
-                  ? "bg-gray-900 text-blue-400"
-                  : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                  ? "text-white"
+                  : "text-gray-300 hover:text-white"
+              } ${
+                isActive
+                  ? "after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-500"
+                  : ""
               }`
             }
             onClick={closeMenu}
@@ -121,10 +175,14 @@ const Navbar = () => {
           <NavLink
             to="/about"
             className={({ isActive }) =>
-              `block px-3 py-2 rounded-md text-base font-medium ${
+              `block px-3 py-2 text-base font-medium transition-all relative ${
                 isActive
-                  ? "bg-gray-900 text-blue-400"
-                  : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                  ? "text-white"
+                  : "text-gray-300 hover:text-white"
+              } ${
+                isActive
+                  ? "after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-500"
+                  : ""
               }`
             }
             onClick={closeMenu}
@@ -134,10 +192,14 @@ const Navbar = () => {
           <NavLink
             to="/skills"
             className={({ isActive }) =>
-              `block px-3 py-2 rounded-md text-base font-medium ${
+              `block px-3 py-2 text-base font-medium transition-all relative ${
                 isActive
-                  ? "bg-gray-900 text-blue-400"
-                  : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                  ? "text-white"
+                  : "text-gray-300 hover:text-white"
+              } ${
+                isActive
+                  ? "after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-500"
+                  : ""
               }`
             }
             onClick={closeMenu}
@@ -147,10 +209,14 @@ const Navbar = () => {
           <NavLink
             to="/projects"
             className={({ isActive }) =>
-              `block px-3 py-2 rounded-md text-base font-medium ${
+              `block px-3 py-2 text-base font-medium transition-all relative ${
                 isActive
-                  ? "bg-gray-900 text-blue-400"
-                  : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                  ? "text-white"
+                  : "text-gray-300 hover:text-white"
+              } ${
+                isActive
+                  ? "after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-500"
+                  : ""
               }`
             }
             onClick={closeMenu}
@@ -160,10 +226,14 @@ const Navbar = () => {
           <NavLink
             to="/contact"
             className={({ isActive }) =>
-              `block px-3 py-2 rounded-md text-base font-medium ${
+              `block px-3 py-2 text-base font-medium transition-all relative ${
                 isActive
-                  ? "bg-gray-900 text-blue-400"
-                  : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                  ? "text-white"
+                  : "text-gray-300 hover:text-white"
+              } ${
+                isActive
+                  ? "after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-500"
+                  : ""
               }`
             }
             onClick={closeMenu}

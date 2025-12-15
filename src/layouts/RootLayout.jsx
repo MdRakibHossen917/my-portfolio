@@ -6,15 +6,12 @@ import Footer from "../shared/Footer/Footer";
 
 const RootLayout = () => {
   return (
-    <div>
-      <Navbar></Navbar>
-
-      <div className="min-h-[calc(100vh-72px)]">
-        <Outlet></Outlet>
-      </div>
-     <div className="flex-grow">
-         <Footer></Footer>
-      </div>
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <main className="flex-grow pt-20">
+        <Outlet />
+      </main>
+      <Footer />
     </div>
   );
 };

@@ -24,6 +24,18 @@ import agro3 from "../assets/agro/agro3.png";
 import agro4 from "../assets/agro/agro4.png"
 import agro5 from "../assets/agro/agro5.png";
 
+import aviary1 from "../assets/Aviary/screencapture-birds-psi-vercel-app-2025-12-16-02_21_31.png";
+import aviary2 from "../assets/Aviary/screencapture-birds-psi-vercel-app-blog-1-2025-12-16-02_23_19-1.png";
+import aviary3 from "../assets/Aviary/screencapture-birds-psi-vercel-app-blog-1-2025-12-16-02_23_19.png";
+
+import donorbd1 from "../assets/DonorBD/donorbd1.JPG";
+import donorbd2 from "../assets/DonorBD/donorbd2.JPG";
+import donorbd3 from "../assets/DonorBD/donorbd3.JPG";
+
+import airbnb1 from "../assets/Airbnb/screencapture-airbnb-eta-henna-vercel-app-2025-12-16-02_57_32.png";
+import airbnb2 from "../assets/Airbnb/screencapture-airbnb-eta-henna-vercel-app-experiences-2025-12-16-02_58_09.png";
+import airbnb3 from "../assets/Airbnb/screencapture-airbnb-eta-henna-vercel-app-services-2025-12-16-02_58_40.png";
+
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import {
   SiMongodb,
@@ -107,6 +119,50 @@ const Projects = () => {
       githubClient: "https://github.com/MdRakibHossen917/agro-vet",
       category: "frontend",
     },
+    {
+      id: "project6",
+      name: "HK Aviary BD",
+      images: [aviary1, aviary2, aviary3],
+      des: "HK Aviary BD is a comprehensive bird care and species information platform. It features bird species database, expert care guides, blog articles, and conservation information. Built with modern web technologies for bird enthusiasts.",
+      icons: [
+        <FaReact key="react" className="text-blue-500" />,
+        <SiTailwindcss key="tailwind" className="text-cyan-400" />,
+        <SiNextdotjs key="nextjs" className="text-cyan-400" />,
+      ],
+      liveLink: "https://birds-psi.vercel.app/",
+      githubClient: "https://github.com/MdRakibHossen917",
+      category: "frontend",
+    },
+    {
+      id: "project7",
+      name: "DonorBD",
+      images: [donorbd1, donorbd2, donorbd3],
+      des: "DonorBD is a comprehensive donation platform connecting donors with verified causes across Bangladesh. Features include campaign management, donation tracking, user dashboard, and transparent impact reporting. Built to facilitate charitable giving and support meaningful causes.",
+      icons: [
+        <FaReact key="react" className="text-blue-500" />,
+        <SiJavascript key="js" className="text-yellow-500" />,
+        <SiTailwindcss key="tailwind" className="text-cyan-400" />,
+        <SiNextdotjs key="nextjs" className="text-cyan-400" />,
+      ],
+      liveLink: "https://donorbd.vercel.app/",
+      githubClient: "https://github.com/MdRakibHossen917",
+      category: "fullstack",
+    },
+    {
+      id: "project8",
+      name: "Airbnb Clone",
+      images: [airbnb1, airbnb2, airbnb3],
+      des: "A full-featured Airbnb clone built with Next.js featuring property listings, search functionality, booking system, and multi-language support. Includes Homes, Experiences, and Services sections with responsive design and modern UI.",
+      icons: [
+        <FaReact key="react" className="text-blue-500" />,
+        <SiNextdotjs key="nextjs" className="text-cyan-400" />,
+        <SiTailwindcss key="tailwind" className="text-cyan-400" />,
+        <SiJavascript key="js" className="text-yellow-500" />,
+      ],
+      liveLink: "https://airbnb-eta-henna.vercel.app/",
+      githubClient: "https://github.com/MdRakibHossen917",
+      category: "frontend",
+    },
   ];
 
   const filteredProjects =
@@ -117,7 +173,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="mt-24 mb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+      className="py-20 scroll-mt-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
     >
       <div className="text-center mb-16">
         <motion.h2
@@ -174,7 +230,7 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="w-full sm:w-[48%] lg:w-[32%] xl:w-[30%] 2xl:w-[28%] bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 dark:border-gray-700 group"
+            className="w-full sm:w-[48%] lg:w-[32%] xl:w-[30%] 2xl:w-[28%] bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 dark:border-gray-700 group flex flex-col"
           >
             <div className="relative h-48 overflow-hidden">
               <Carousel

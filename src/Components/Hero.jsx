@@ -90,7 +90,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="w-11/12 mt-16 mx-auto min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 relative"
+      className="w-11/12 pt-24 mx-auto min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 relative"
     >
       <motion.div
         className="w-11/12 max-w-7xl mx-auto"
